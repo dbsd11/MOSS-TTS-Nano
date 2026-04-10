@@ -2,11 +2,7 @@
 
 <br>
 
-<p align="center">
-  <img src="./assets/images/OpenMOSS_Logo.png" height="70" align="middle" />
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="./assets/images/mosi-logo.png" height="50" align="middle" />
-</p>
+
 
 <div align="center">
   <a href="https://clawhub.ai/luogao2333/moss-tts-voice"><img src="https://img.shields.io/badge/🦞_OpenClaw-Skills-8A2BE2" alt="OpenClaw"></a>
@@ -51,6 +47,12 @@ MOSS-TTS-Nano is an open-source **multilingual tiny speech generation model** fr
 - [Star History](#star-history)
 
 ## Introduction
+
+<p align="center">
+  <img src="./assets/images/OpenMOSS_Logo.png" height="70" align="middle" />
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="./assets/images/mosi-logo.png" height="50" align="middle" />
+</p>
 
 MOSS-TTS-Nano focuses on the part of TTS deployment that matters most in practice: **small footprint**, **low latency**, **good enough quality for realtime products**, and **simple local setup**. It uses a pure autoregressive **Audio Tokenizer + LLM** pipeline and keeps the inference workflow friendly for both terminal users and web-demo users.
 

@@ -76,6 +76,12 @@ MOSS-TTS-Nano focuses on the part of TTS deployment that matters most in practic
 - **Long-text capable**: supports long input with automatic chunked voice cloning
 - **Open-source deployment**: direct `python infer.py`, `python app.py`, and packaged CLI support
 
+<p align="center">
+  <img src="./assets/images/arch_moss_tts_nano.png" alt="MOSS-TTS-Nano architecture" width="80%" />
+  <br />
+  Architecture of MOSS-TTS-Nano
+</p>
+
 ## Supported Languages
 
 MOSS-TTS-Nano currently supports **20 languages**:

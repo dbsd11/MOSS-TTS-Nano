@@ -4,7 +4,7 @@ WORKDIR /app
 
 # System dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    gcc g++ \
+    gcc g++ git \
     && rm -rf /var/lib/apt/lists/*
 
 # Python dependencies (layer cache optimized)

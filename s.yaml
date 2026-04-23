@@ -48,7 +48,7 @@ services:
           command: '["sh"]'
           args: '["/app/start.sh"]'
         cpu: 2
-        memorySize: 2048 # 单位MB
+        memorySize: 4096 # 单位MB
         diskSize: 512 # 单位MB
         instanceConcurrency: 200
         logConfig:

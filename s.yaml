@@ -44,7 +44,7 @@ services:
         timeout: 7200
         caPort: 18083
         customContainerConfig: 
-          image: "registry-vpc.cn-chengdu.aliyuncs.com/dbsnolimit/moss-tts-nano:latest"
+          image: "registry-vpc.cn-hangzhou.aliyuncs.com/dbsnolimit/moss-tts-nano:latest"
         cpu: 4
         memorySize: 4096 # 单位MB
         diskSize: 512 # 单位MB

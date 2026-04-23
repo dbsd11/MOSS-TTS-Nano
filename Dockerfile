@@ -15,8 +15,6 @@ RUN pip install --no-cache-dir pynini==2.1.6 \
 
 COPY . .
 
-RUN cp start.sh /app/start.sh
-
 EXPOSE 18083
 
 ENV PYTHONUNBUFFERED=1

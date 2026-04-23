@@ -31,10 +31,10 @@ services:
           mountPoints:
             - serverAddr: 03808482b2-nwn30.cn-hangzhou.nas.aliyuncs.com
               nasDir: /moss-tts-models
-              fcDir: /app/models
+              fcDir: /mnt/app/models
             - serverAddr: 03808482b2-nwn30.cn-hangzhou.nas.aliyuncs.com
               nasDir: /moss-tts-cache
-              fcDir: /app/.cache
+              fcDir: /mnt/app/.cache
       function:
         name: "moss-tts-api"
         description: 'moss tts api'

@@ -13,8 +13,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Login to Aliyun ACR
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: docker/login-action@v3
+        with:
+          registry: registry.cn-chengdu.aliyuncs.com
+          username: ${{ secrets.DOCKER_USER }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
       - name: Build Docker image
         run: docker build -t moss-tts-nano:local .
+        timeout-minutes: 60
 
       - name: Verify image
         run: |
@@ -26,3 +35,10 @@ jobs:
           done
           docker logs test
           docker stop test && docker rm test
+
+      - name: Tag and push to Aliyun ACR
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          IMAGE=registry.cn-chengdu.aliyuncs.com/dbsnolimit/moss-tts-nano:latest
+          docker tag moss-tts-nano:local $IMAGE
+          docker push $IMAGE

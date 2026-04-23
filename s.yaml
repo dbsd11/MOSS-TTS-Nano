@@ -45,6 +45,8 @@ services:
         caPort: 18083
         customContainerConfig: 
           image: "registry-vpc.cn-hangzhou.aliyuncs.com/dbsnolimit/moss-tts-nano:latest"
+          command: '["sh"]'
+          args: '["/app/start.sh"]'
         cpu: 4
         memorySize: 4096 # 单位MB
         diskSize: 512 # 单位MB

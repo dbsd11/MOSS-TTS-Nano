@@ -15,10 +15,10 @@ RUN pip install --no-cache-dir pynini==2.1.6 \
 
 COPY . .
 
-RUN mkdir -p /app/models
+RUN copy start.sh /app/start.sh
 
 EXPOSE 18083
 
 ENV PYTHONUNBUFFERED=1
 
-CMD ["python", "app_onnx.py", "--host", "0.0.0.0"]
+CMD ["sh", "/app/start.sh"]

@@ -1,0 +1,28 @@
+name: Docker Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t moss-tts-nano:local .
+
+      - name: Verify image
+        run: |
+          docker images moss-tts-nano:local
+          docker run -d --name test -p 18083:18083 -v /tmp/models:/app/models moss-tts-nano:local
+          for i in $(seq 1 60); do
+            curl -sf http://localhost:18083/health && break
+            sleep 2
+          done
+          docker logs test
+          docker stop test && docker rm test

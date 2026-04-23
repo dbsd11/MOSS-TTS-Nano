@@ -185,7 +185,7 @@ def _build_parser() -> argparse.ArgumentParser:
         default=375,
         help="ONNX backend only. Maximum generated audio frames.",
     )
-    serve_parser.add_argument("--host", default="localhost")
+    serve_parser.add_argument("--host", default="0.0.0.0")
     serve_parser.add_argument("--port", type=int, default=18083)
     serve_parser.add_argument("--share", action="store_true", help="Accepted for compatibility.")
     serve_parser.set_defaults(handler=_run_serve)

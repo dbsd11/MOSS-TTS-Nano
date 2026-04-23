@@ -47,10 +47,10 @@ services:
           image: "registry-vpc.cn-hangzhou.aliyuncs.com/dbsnolimit/moss-tts-nano:latest"
           command: '["sh"]'
           args: '["/app/start.sh"]'
-        cpu: 2
-        memorySize: 4096 # 单位MB
+        cpu: 4
+        memorySize: 8192 # 单位MB
         diskSize: 512 # 单位MB
-        instanceConcurrency: 200
+        instanceConcurrency: 10
         logConfig:
           project: 'serverless-log'
           logstore: 'moss-tts'

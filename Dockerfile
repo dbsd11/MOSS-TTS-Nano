@@ -15,7 +15,7 @@ RUN pip install --no-cache-dir pynini==2.1.6 \
 
 COPY . .
 
-RUN copy start.sh /app/start.sh
+RUN cp start.sh /app/start.sh
 
 EXPOSE 18083
 

@@ -39,6 +39,6 @@ jobs:
       - name: Tag and push to Aliyun ACR
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
-          IMAGE=registry.cn-chengdu.aliyuncs.com/dbsnolimit/moss-tts-nano:latest
+          IMAGE=registry.cn-hangzhou.aliyuncs.com/dbsnolimit/moss-tts-nano:latest
           docker tag moss-tts-nano:local $IMAGE
           docker push $IMAGE
